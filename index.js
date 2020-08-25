@@ -1,4 +1,7 @@
 const inquirer = require("inquirer");
+const fs = require("fs");
+const api = require("axios");
+const generate = require(".utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -61,12 +64,23 @@ const questions = [
 // function to write README file
 function writeToFile(fileName, data) {
   //return write file here (look in fs docs, look into path)
-}
+  fs.writeToFile(fileName + ".md", data, error => error ? console.log(error) : console.log(`${fileName + ".md"} generated successfully!`))
+};
 
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then(function (answers){
     console.log(answers);
+
+    fs.writeToFile("README.md", generate(answers), function (err) {
+      if(err) {
+        throw err;
+      }
+
+      console.log("New README file created successfully!");
+    });
+
+
     // call your write file function
     //file name = "README.md"
     //require in generate markdown js and pass in inquirer data to write the readme
