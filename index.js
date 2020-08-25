@@ -37,27 +37,39 @@ const questions = [
 
   {
     type: "input",
-    name: "test",
-    message: "How do you run tests? (can default npm tests)"
-  },
-
-  {
-    type: "input",
     name: "usage",
     message: "How do I use the application?"
   },
-
-  {
-    type: "input",
-    name: "contributions",
-    message: "Who contributed to this application?"
-  }
 
   /*{
     type: "list",
     name: "license",
     message: "MIT, BSD-2-Clause"
   }*/
+
+  {
+    type: "input",
+    name: "contributions",
+    message: "Who contributed to this application?"
+  },
+
+  {
+    type: "input",
+    name: "tests",
+    message: "How do you run tests? (can default npm tests)"
+  },
+
+  {
+    type: "input",
+    name: "badge",
+    message: "What badge link do you want?"
+  },
+
+  {
+    type: "input",
+    name: "questions",
+    message: "Do you have any additional questions?"
+  }
 
 ];
 
