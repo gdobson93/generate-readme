@@ -1,5 +1,16 @@
 // array of questions for user
 const questions = [
+  {
+    type: "input",
+    name: "github",
+    message: "What is your Github username?"
+  }, 
+
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
+  }
 
 ];
 
