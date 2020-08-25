@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
-const fs = require("fs");
-const api = require("axios");
-const generate = require(".utils/generateMarkdown");
+//const fs = require("fs");
+//const api = require("axios");
+const generate = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -41,11 +41,11 @@ const questions = [
     message: "How do I use the application?"
   },
 
-  /*{
+  {
     type: "list",
     name: "license",
-    message: "MIT, BSD-2-Clause"
-  }*/
+    choices: ["MIT, BSD-2-Clause"]
+  },
 
   {
     type: "input",
