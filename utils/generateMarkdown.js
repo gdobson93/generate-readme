@@ -7,8 +7,6 @@ function generateMarkdown(data) {
 
   ${data.description}
   
-  # ${data.username}
-
   ## Table of Contents 
 
   * [Description](#Description)
@@ -19,7 +17,6 @@ function generateMarkdown(data) {
   * [Tests](#Tests)
   * [Questions](#Questions)
   * [Badge](#Badge)
-  
 
   ## Installation
 
@@ -43,11 +40,15 @@ function generateMarkdown(data) {
 
   ## Questions
 
+  ${data.username}
+  ${data.reponame}
+  ${data.email}
   ${data.questions}
 
   ## Badge
 
   ${data.badge}
+
 
 `;
 }

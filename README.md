@@ -4,10 +4,8 @@
 
   ## Description
 
-  readme generator
+  When creating an open source project on GitHub, it is important to have a quality README with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
   
-  # gdobson93
-
   ## Table of Contents 
 
   * [Description](#Description)
@@ -18,15 +16,14 @@
   * [Tests](#Tests)
   * [Questions](#Questions)
   * [Badge](#Badge)
-  
 
   ## Installation
 
-  inquirier
+  The npm module: inquirier, will need to be installed in order for this application to function. 
 
   ## Usage
 
-  answer questions
+  The user will go to the command line and type in "node index.js." Once this is done then there will be a list of questions for the user to complete to generate the README file. 
 
   ## License
 
@@ -34,17 +31,21 @@
 
   ## Contributions
 
-  garrett
+  https://img.shields.io/badge/Made%20By-gdobson93-brightgreen
 
   ## Tests 
 
-  test
+  The user can run default npm test. 
 
   ## Questions
 
+  gdobson93
+  https://github.com/gdobson93/generate-readme
+  garrettdobson33@gmail.com
   no
 
   ## Badge
 
-  https://img.shields.io/badge/Made%20By-gdobson93-brightgreen
+  https://img.shields.io/badge/Licenses-MIT-blue
+
 
