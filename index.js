@@ -1,22 +1,10 @@
 const inquirer = require("inquirer");
-//const fs = require("fs");
-//const api = require("axios");
+const fs = require("fs");
 const generate = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
-  {
-    type: "input",
-    name: "github",
-    message: "What is your Github username?"
-  }, 
-
-  {
-    type: "input",
-    name: "email",
-    message: "What is your email address?"
-  },
-
+  
   {
     type: "input",
     name: "title",
@@ -67,28 +55,55 @@ const questions = [
 
   {
     type: "input",
+    name: "username",
+    message: "What is your Github username?"
+  }, 
+
+  {
+    type: "input",
+    name: "reponame",
+    message: "What is your Github repo link?"
+  },
+
+  {
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
+  },
+
+  {
+    type: "input",
     name: "questions",
     message: "Do you have any additional questions?"
   }
 
 ];
-
-// function to write README file
-function writeToFile(fileName, data) {
-  //return write file here (look in fs docs, look into path)
-  fs.writeToFile(fileName + ".md", data, error => error ? console.log(error) : console.log(`${fileName + ".md"} generated successfully!`))
-};
-
 // function to initialize program
 function init() {
   inquirer.prompt(questions).then(function (answers){
-    console.log(answers);
 
-    fs.writeToFile("README.md", generate(answers), function (err) {
+    const api = {
+      async getUserInfo (username, reponame) {
+        const axios = require("axios")
+        const { data } = await axios.get(`https://api.github.com/search/repositories?q=${reponame}+user:${username}`)
+        if (data.total_count === 0) {
+          return false;
+        } else {
+          return {
+            title: data.items[0].name,
+            fullName: data.items[0].full_name,
+            username: data.items[0].owner.login,
+            avatar: data.items[0].owner.avatar_url,
+            link: data.items[0].owner.html_url
+          };
+        }
+      }
+    }
+
+    fs.writeFile("README.md", generate(answers), function (err) {
       if(err) {
         throw err;
       }
-
       console.log("New README file created successfully!");
     });
 
