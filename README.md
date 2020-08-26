@@ -19,11 +19,11 @@
 
   ## Installation
 
-  The npm module: inquirier, will need to be installed in order for this application to function. 
+  Before starting anything else on this application it's important for the user to run "npm init -y" as an initial setup so the package.json will be created.  Also the npm module: inquirier, will need to be installed in order for this application function. 
 
   ## Usage
 
-  The user will go to the command line and type in "node index.js." Once this is done then there will be a list of questions for the user to complete to generate the README file. 
+  The user will go to the command line and type in "node index.js." Once this is done then there will be a list of questions for the user to complete to generate the README file.
 
   ## License
 
@@ -35,14 +35,14 @@
 
   ## Tests 
 
-  The user can run default npm test. 
+  The user can run default npm tests. 
 
   ## Questions
 
   gdobson93
   https://github.com/gdobson93/generate-readme
   garrettdobson33@gmail.com
-  no
+  N/A
 
   ## Badge
 
