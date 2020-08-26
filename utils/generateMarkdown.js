@@ -18,6 +18,7 @@ function generateMarkdown(data) {
   * [Contributions](#Contribrutions)
   * [Tests](#Tests)
   * [Questions](#Questions)
+  * [Badge](#Badge)
   
 
   ## Installation
@@ -43,6 +44,10 @@ function generateMarkdown(data) {
   ## Questions
 
   ${data.questions}
+
+  ## Badge
+
+  ${data.badge}
 
 `;
 }
