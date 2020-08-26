@@ -41,8 +41,11 @@ function generateMarkdown(data) {
   ## Questions
 
   ${data.username}
+
   ${data.reponame}
+  
   ${data.email}
+  
   ${data.questions}
 
   ## Badge

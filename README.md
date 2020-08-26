@@ -19,7 +19,7 @@
 
   ## Installation
 
-  Before starting anything else on this application it's important for the user to run "npm init -y" as an initial setup so the package.json will be created.  Also the npm module: inquirier, will need to be installed in order for this application function. 
+  Before starting anything else on this application it's important for the user to run "npm init -y" as an initial setup so the package.json will be created. Also the npm module: inquirier, will need to be installed in order for this application function.
 
   ## Usage
 
@@ -35,7 +35,7 @@
 
   ## Tests 
 
-  The user can run default npm tests. 
+  The user can run default npm tests.
 
   ## Questions
 
